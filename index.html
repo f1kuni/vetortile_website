@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>UNVT_youth</title>
+<title>都知事杯 成果物</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
@@ -14,16 +14,16 @@ body { margin: 0; padding: 0; }
 <body>
 <div id="map"></div>
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiZjFrdW5pIiwiYSI6ImNrdzJ4ZWhtNDBwaXAzMW1veXN5cGYwM2EifQ.-NTeimXFcbrFi2g5ZHDgjA';
+	mapboxgl.accessToken = 'pk.eyJ1Ijoib2theWFpc2FoYWthdCIsImEiOiJja3hieXlwaGkwY3l6Mm9vM2JxaWFobGJjIn0.uOj8f7ctM2UDwYwvvbG1gg';
     const map = new mapboxgl.Map({
-        container: 'UNVT_youth', // container ID
+        container: 'map', // container ID
         style: {
             'version': 8,
             'sources': {
                 'raster-tiles': {
                     'type': 'raster',
                     'tiles': [
-                        ''
+                        'https://dronebird.github.io/oam_sagamihara20211215aoyamauniv1155mapconcierge00arw01/xyztiles/{z}/{x}/{y}.png'
                     ],
                     'tileSize': 256,
                     'attribution':
@@ -32,7 +32,7 @@ body { margin: 0; padding: 0; }
                 'Japan': {
                     'type': 'raster',
                     'tiles': [
-                        ''
+                        'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png'
                     ],
                     'tileSize': 256,
                     // 'attribution':
@@ -47,9 +47,9 @@ body { margin: 0; padding: 0; }
                     'type': 'raster'
                 },
                 {
-                    'id': 'd-yzone',
-                    'type': 'vector',
-                    'source': 'vector-tiles',
+                    'id': 'simple-tiles',
+                    'type': 'raster',
+                    'source': 'raster-tiles',
                     'minzoom': 0,
                     'maxzoom': 22
                 }
