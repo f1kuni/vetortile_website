@@ -1,0 +1,14 @@
+{
+"name": "d_rzone",
+"description": "d_rzone",
+"version": "2",
+"minzoom": "12",
+"maxzoom": "20",
+"center": "139.509716,34.048250,20",
+"bounds": "138.988554,26.636220,142.211422,35.854447",
+"type": "overlay",
+"format": "pbf",
+"generator": "tippecanoe v1.36.0",
+"generator_options": "tippecanoe --no-tile-compression -z21 -Z12 -e d_rzone -y code -l layername -ai d_rzone.geojson",
+"json": "{\"vector_layers\": [ { \"id\": \"layername\", \"description\": \"\", \"minzoom\": 12, \"maxzoom\": 20, \"fields\": {} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"layername\",\"count\": 1688,\"geometry\": \"Polygon\",\"attributeCount\": 0,\"attributes\": []}]}}"
+}
