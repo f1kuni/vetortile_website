@@ -16,7 +16,7 @@ body { margin: 0; padding: 0; }
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiZjFrdW5pIiwiYSI6ImNrdzJ4ZWhtNDBwaXAzMW1veXN5cGYwM2EifQ.-NTeimXFcbrFi2g5ZHDgjA';
     const map = new mapboxgl.Map({
-        container: 'map', // container ID
+        container: 'UNVT_youth', // container ID
         style: {
           "version": 8,
         "sources": {
@@ -25,20 +25,31 @@ body { margin: 0; padding: 0; }
                 "tiles": [
                     "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"
                 ],
-                "tileSize": 256
-            }
+                "tileSize": 256,
+                // 'attribution':
+                    //     'Map tiles by <a target="_top" rel="noopener" href="http://stamen.com">Stamen Design</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
+                  }
+            },
+            
+            'layers': [
+                {
+                    'id': 'lowest-background',
+                    'source': 'Japan',
+                    'type': 'raster'
+                },
+                {
+                    'id': 'simple-tiles',
+                    'type': 'raster',
+                    'source': 'raster-tiles',
+                    'minzoom': 0,
+                    'maxzoom': 22
+                }
+            ]
         },
-        "layers": [{
-            "id": "t_pale",
-            "type": "raster",
-            "source": "t_pale",
-            "minzoom": 0,
-            "maxzoom": 18
-        }]
-    },
-    center: [139.767, 35.681],
-    zoom: 11
+      center: [139.40289974212644, 35.566392107579524], // starting position
+      zoom: 14 // starting zoom
     });
 </script>
+
 </body>
 </html>
