@@ -23,12 +23,15 @@ body { margin: 0; padding: 0; }
             "t_pale": {
                 "type": "raster",
                 "tiles": [
-                    "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"
+                "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"
                 ],
                 "tileSize": 256,
                 'attribution':
                         'Map tiles by <a target="_top" rel="noopener" href="http://furuhashilab.com/">Furuhashi Lab.</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-              
+            },
+            "d_rzone": {
+                "type": "vector",
+                "url": "https://f1kuni.github.io/vetortile_website/d_rzone/{z}/{x}/{y}.pbf"
             }
         },
         "layers": [{
@@ -36,7 +39,15 @@ body { margin: 0; padding: 0; }
             "type": "raster",
             "source": "t_pale",
             "minzoom": 0,
-            "maxzoom": 18
+            "maxzoom": 18},
+{
+            "id": "d_rzone",
+            "source": "d_rzone",
+            "source-layer": "d_rzone",
+            "type": "vector",
+            "paint": {
+                "fill-color": "#962121"
+            }
         }]
     },
     center: [139.767, 35.681],
