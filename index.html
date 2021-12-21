@@ -16,28 +16,34 @@ body { margin: 0; padding: 0; }
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiZjFrdW5pIiwiYSI6ImNrdzJ4ZWhtNDBwaXAzMW1veXN5cGYwM2EifQ.-NTeimXFcbrFi2g5ZHDgjA';
     const map = new mapboxgl.Map({
-        container: 'map', // container ID
+        container: 'UNVT_youth', // container ID
         style: {
-          "version": 8,
-        "sources": {
-            "t_pale": {
-                "type": "raster",
-                "tiles": [
-                    "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"
-                ],
-                "tileSize": 256
-            }
-        },
-        "layers": [{
+            'version': 8,
+            'sources': {
+              't_pale':{
+                'type':'raster',
+                'tiles': [
+                  'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png'
+                    ],
+                    'tileSize':256
+              }
+            },
+            'layers': [
+              {
             "id": "t_pale",
             "type": "raster",
             "source": "t_pale",
             "minzoom": 0,
-            "maxzoom": 18
-        }]
-    },
-    center: [139.767, 35.681],
-    zoom: 11
+            "maxzoom": 18},
+                {
+                    'id': 'd_yzone',
+                    'source': 'composite',
+                    'type': 'fill'
+                },
+            ]
+        },
+      center: [139.40289974212644, 35.566392107579524], // starting position
+      zoom: 14 // starting zoom
     });
 </script>
 </body>
