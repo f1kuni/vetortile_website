@@ -32,7 +32,7 @@ body { margin: 0; padding: 0; }
                 'Japan': {
                     'type': 'raster',
                     'tiles': [
-                        'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png'
+                        ''
                     ],
                     'tileSize': 256,
                     // 'attribution':
@@ -47,9 +47,9 @@ body { margin: 0; padding: 0; }
                     'type': 'raster'
                 },
                 {
-                    'id': 'simple-tiles',
-                    'type': 'raster',
-                    'source': 'raster-tiles',
+                    'id': 'd-yzone',
+                    'type': 'vector',
+                    'source': 'vector-tiles',
                     'minzoom': 0,
                     'maxzoom': 22
                 }
