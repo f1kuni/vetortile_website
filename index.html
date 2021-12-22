@@ -34,3 +34,25 @@ body { margin: 0; padding: 0; }
                 "url": "https://f1kuni.github.io/vetortile_website/d_rzone/{z}/{x}/{y}.pbf"
             }
         },
+        "layers": [{
+            "id": "t_pale",
+            "type": "raster",
+            "source": "t_pale",
+            "minzoom": 0,
+            "maxzoom": 18},
+                   {
+            "id": "d_rzone",
+            "source": "d_rzone",
+            "source-layer": "d_rzone",
+            "type": "fill",
+            "paint": {
+                "fill-color": "#962121"},
+                   },
+                        ]
+                },
+    center: [139.767, 35.681],
+    zoom: 11
+        });
+</script>
+</body>
+</html>
