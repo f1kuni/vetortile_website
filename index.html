@@ -29,33 +29,8 @@ body { margin: 0; padding: 0; }
                 'attribution':
                         'Map tiles by <a target="_top" rel="noopener" href="http://furuhashilab.com/">Furuhashi Lab.</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
             },
-            "composite": {
+            "d_rzone": {
                 "type": "vector",
-                "tiles": ["https://f1kuni.github.io/vetortile_website/d_rzone/{z}/{x}/{y}.pbf"
-            ],
-            "maxzoom": 20
-          }
+                "url": "https://f1kuni.github.io/vetortile_website/d_rzone/{z}/{x}/{y}.pbf"
+            }
         },
-        "layers": [{
-            "id": "t_pale",
-            "type": "raster",
-            "source": "t_pale",
-            "minzoom": 0,
-            "maxzoom": 18},
-                   {
-            "id": "d_rzone",
-            "type": "fill",
-            "source": "composite",
-            "minzoom": 12,
-            "maxzoom": 20,
-            "paint": {
-                "fill-color": "#A02B2B"},
-                   
-          }], 
-                },
-    center: [139.767, 35.681],
-    zoom: 11
-              });
-</script>
-</body>
-</html>
