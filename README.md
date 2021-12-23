@@ -6,3 +6,5 @@ https://f1kuni.github.io/vetortile_website/
 
 ## Vector tile url
 https://f1kuni.github.io/vetortile_website/d_rzone/{z}/{x}/{y}.pbf
+
+https://f1kuni.github.io/vetortile_website/d_yzone/{z}/{x}/{y}.pbf
