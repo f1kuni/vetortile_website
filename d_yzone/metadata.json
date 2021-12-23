@@ -1,0 +1,14 @@
+{
+"name": "d_yzone",
+"description": "d_yzone",
+"version": "2",
+"minzoom": "12",
+"maxzoom": "20",
+"center": "139.813900,33.058313,20",
+"bounds": "138.988285,26.634022,142.216092,35.854803",
+"type": "overlay",
+"format": "pbf",
+"generator": "tippecanoe v1.36.0",
+"generator_options": "tippecanoe --no-tile-compression -z20 -Z12 -e d_yzone -y d_yzone -l d_yzone -ai d_yzone.geojson",
+"json": "{\"vector_layers\": [ { \"id\": \"d_yzone\", \"description\": \"\", \"minzoom\": 12, \"maxzoom\": 20, \"fields\": {} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"d_yzone\",\"count\": 1989,\"geometry\": \"Polygon\",\"attributeCount\": 0,\"attributes\": []}]}}"
+}
